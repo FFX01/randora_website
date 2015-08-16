@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# provide get_profile() method
+AUTH_PROFILE_MODULE = 'users.Member'
 
 # Application definition
 
@@ -39,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'newsletter',
     'main',
+    'users',
 )
 
 MIDDLEWARE_CLASSES = (

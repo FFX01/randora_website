@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)), 
     url(r'^newsletter/', include('newsletter.urls')),
     url(r'^main/', include('main.urls')),
+    url(r'^users/', include('users.urls')),
 ]
 
 # The below setting is for development only. Static files should be served from
