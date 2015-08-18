@@ -1,0 +1,26 @@
+{% extends 'users_base.html' %}
+
+{% block jumbotron %}
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="jumbotron">
+
+    <h1>Login to Randora:</h1>
+
+    <br>{{user}}
+
+    <p>Please login below</p>
+
+    <form method="POST">
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" value="Login">
+    </form>
+
+    {% if errors %}
+      {% for error in errors %}
+        <span>{{error}}</span>
+      {% endfor %}
+    {% endif %}
+  
+  </div>
+{% endblock %}

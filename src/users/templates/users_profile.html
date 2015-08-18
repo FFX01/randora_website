@@ -1,0 +1,30 @@
+{% extends 'users_base.html' %}
+
+{% block jumbotron %}
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="jumbotron">
+
+    <h1>Profile:</h1>
+
+    <br>
+    <strong>Username: </strong><p>{{user.username}}</p>
+    <br>
+
+    <ul>
+      <li><strong>First Name: </strong><p>{{user.first_name}}</p></li>
+      <li><strong>Last Name: </strong><p>{{user.last_name}}</p></li>
+      <li><strong>Email: </strong><p>{{user.email}}</p></li>
+      <li><strong>Is Staff: </strong><p>{{user.is_staff}}</p></li>
+      <li><strong>Is Active: </strong><p>{{user.is_active}}</p></li>
+      <li><strong>Last Logged in: </strong><p>{{user.last_login}}</p></li>
+      <li><strong>Date Joined: </strong><p>{{user.date_joined}}</p></li>
+    </ul>
+
+    {% if errors %}
+      {% for error in errors %}
+        <span>{{error}}</span>
+      {% endfor %}
+    {% endif %}
+  
+  </div>
+{% endblock %}
